@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // intro
 
   // GSAP 파도 효과 적용
+  gsap.from(".intro", {
+    duration: 2,
+  });
   gsap.fromTo(
     ".intro_top_text_1",
     {
@@ -105,13 +108,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   );
   gsap.to(".intro_top span,.intro_bottom span ", {
-    y: -60,
+    y: -30,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.05,
     delay: 2,
-    duration: 0.7,
-
-    stagger: 0.06,
     ease: "easeOut",
+    repeat: 1,
     yoyo: true,
-    reapeat: -1,
   });
 });
